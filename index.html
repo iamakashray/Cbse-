@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CBSE 10th All The Best</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+min-height:100vh;
+background:linear-gradient(135deg,#4facfe,#8e44ad);
+color:white;
+overflow-x:hidden;
+text-align:center;
+}
+
+/* Floating Graphics */
+.circle{
+position:fixed;
+border-radius:50%;
+background:rgba(255,255,255,0.15);
+animation:float 10s infinite ease-in-out;
+}
+
+.circle:nth-child(1){
+width:120px;height:120px;
+top:10%;left:5%;
+}
+
+.circle:nth-child(2){
+width:180px;height:180px;
+bottom:10%;right:5%;
+animation-delay:2s;
+}
+
+.circle:nth-child(3){
+width:80px;height:80px;
+top:60%;left:70%;
+animation-delay:4s;
+}
+
+@keyframes float{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-30px);}
+}
+
+/* Container */
+.container{
+padding:40px 20px;
+animation:fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn{
+from{opacity:0; transform:translateY(40px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+h1{
+font-size:38px;
+font-weight:800;
+text-shadow:0 0 20px rgba(255,255,255,0.7);
+}
+
+h2{
+margin-top:15px;
+font-size:28px;
+animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.05);}
+100%{transform:scale(1);}
+}
+
+.message{
+margin-top:20px;
+font-size:18px;
+line-height:1.6;
+}
+
+.result{
+margin-top:30px;
+background:rgba(255,255,255,0.15);
+padding:20px;
+border-radius:15px;
+backdrop-filter:blur(10px);
+}
+
+/* Button */
+.music-btn{
+margin-top:25px;
+padding:12px 28px;
+border:none;
+border-radius:30px;
+font-size:16px;
+font-weight:600;
+cursor:pointer;
+background:white;
+color:#8e44ad;
+transition:0.3s;
+}
+
+.music-btn:hover{
+transform:scale(1.1);
+box-shadow:0 0 15px white;
+}
+
+/* Footer */
+footer{
+margin-top:60px;
+padding:20px;
+background:rgba(0,0,0,0.25);
+}
+
+.instagram{
+color:white;
+text-decoration:none;
+font-size:18px;
+}
+
+.instagram i{
+margin-right:8px;
+color:#ff4da6;
+}
+
+/* Mobile Responsive */
+@media(max-width:600px){
+h1{font-size:28px;}
+h2{font-size:22px;}
+.message{font-size:16px;}
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Background Graphics -->
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+
+<div class="container">
+
+<h1>🎓 CBSE Class 10 Board Exam</h1>
+<h2>✨ ALL THE BEST ✨</h2>
+
+<p class="message">
+Dear Candidates,<br>
+Stay confident, stay calm and give your best.<br>
+Success comes to those who believe in themselves!
+</p>
+
+<div class="result">
+🌟 Your result is only a number, not your true potential.
+Marks can measure exams, but they cannot measure your dreams, talent or future.
+Be proud of your effort — this is just the beginning of something bigger.”</div>
+
+<button class="music-btn" onclick="toggleMusic()">▶ Play Music</button>
+
+<audio id="bgMusic" loop>
+<source src="music.mp3" type="audio/mp3">
+</audio>
+
+</div>
+
+<footer>
+
+<a href="https://instagram.com/iam_akashray_" target="_blank"
+style="color:white;text-decoration:none;">
+
+<p>Website created by <b>@iam_akashray_</b></p>
+
+<div class="instagram">
+<i class="fa-brands fa-instagram"></i> Follow me on Instagram
+</div>
+
+</a>
+
+</footer>
+
+
+<script>
+let music=document.getElementById("bgMusic");
+let btn=document.querySelector(".music-btn");
+
+function toggleMusic(){
+if(music.paused){
+music.play();
+btn.innerHTML="⏸ Pause Music";
+}else{
+music.pause();
+btn.innerHTML="▶ Play Music";
+}
+}
+</script>
+
+</body>
+</html>
